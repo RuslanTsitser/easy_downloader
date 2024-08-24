@@ -16,37 +16,37 @@ class Log {
 
   ///debug log
   void d(message, [error, StackTrace? stackTrace]) {
-    log.d(message, error, stackTrace);
+    log.d(message, error: error, stackTrace: stackTrace);
   }
 
   ///error log
   void e(message, [error, StackTrace? stackTrace]) {
-    log.e(message, error, stackTrace);
+    log.e(message, error: error, stackTrace: stackTrace);
   }
 
   ///info log
   void i(message, [error, StackTrace? stackTrace]) {
-    log.i(message, error, stackTrace);
+    log.i(message, error: error, stackTrace: stackTrace);
   }
 
   ///info log with count
   void info(message, [error, StackTrace? stackTrace]) {
     _infoCount++;
-    log.i("$_tag: $_infoCount $message", error, stackTrace);
+    log.i("$_tag: $_infoCount $message", error: error, stackTrace: stackTrace);
   }
 
   ///verbose log
   void v(message, [error, StackTrace? stackTrace]) {
-    log.v(message, error, stackTrace);
+    log.t(message, error: error, stackTrace: stackTrace);
   }
 
   ///warning log
   void w(message, [error, StackTrace? stackTrace]) {
-    log.w(message, error, stackTrace);
+    log.w(message, error: error, stackTrace: stackTrace);
   }
 
   ///wtf log
   void wtf(message, [error, StackTrace? stackTrace]) {
-    log.wtf(message, error, stackTrace);
+    log.f(message, error: error, stackTrace: stackTrace);
   }
 }
